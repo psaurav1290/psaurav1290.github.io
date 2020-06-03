@@ -12,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     animation: eraseout 0.0001ms forwards;
-    animation-delay: 3s;
+    animation-delay: 3.7s;
 }
 
 @keyframes eraseout {
@@ -29,31 +29,36 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    animation: curtainopen 3s ease-in-out forwards;
+    animation: curtainopen 3.5s cubic-bezier(0.56, 0.43, 0.9, 1.72) forwards;
 }
 
 @keyframes curtainopen {
     0% {
         height: 0vh;
     }
-    16.66% {
+    14.28% {
         height: 90vh;
     }
-    83.33% {
+    85.71% {
         height: 90vh;
-        opacity: 1;
     }
-    150% {
-        height: 90vh;
-        opacity: 0;
+    100% {
+        height: 0vh;
     }
 }
 
 #cover-in {
     width: 100%;
-    max-width: 200px;
+    max-width: 400px;
     position: relative;
+    animation: fade 0.7s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
 }
 
 #name-hide {
@@ -63,6 +68,7 @@ body {
 
 #my-name {
     margin-top: 10%;
+    opacity: 0.1;
     transform-origin: -50%;
     transform: rotate(35deg) translateY(10%);
     animation: wipein 0.5s cubic-bezier(0.42, 0, 0.55, 1.65) forwards;
@@ -72,6 +78,7 @@ body {
 @keyframes wipein {
     to {
         transform: rotate(0deg) translateY(0%);
+        opacity: 1;
     }
 }
 
@@ -124,7 +131,7 @@ body {
 
 #my-sign image {
     opacity: 0;
-    animation: 0.0001s show forwards;
+    animation: 0.0001ms show forwards;
     animation-delay: 2.2s;
 }
 
