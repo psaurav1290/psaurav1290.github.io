@@ -158,10 +158,9 @@ header .invisible {
     overflow: hidden;
     /* To remove spaces above it because it's a block element */
     display: inline-block;
-    background-image: url("./Media/Ring.png");
+    background-image: url("./Media/Gem-min.png");
     background-position: center;
     background-size: cover;
-    box-shadow: 0 var(--feather) 100px #000000 inset;
     background-repeat: no-repeat;
 }
 
@@ -381,13 +380,18 @@ header .invisible {
 }
 
 #footer-logo img:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
 }
 
 #contact .contact {
     font-family: "Eras ITC";
     color: white;
     margin: 1%;
+}
+
+.contact a {
+    text-decoration: none;
+    color: rgb(218, 218, 218);
 }
 
 #copyright {
